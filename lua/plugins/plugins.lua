@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         config = function()
             require('plugins.identline')
         end
-      }
+    }
     use {
         'nvim-treesitter/nvim-treesitter',
         config = function()
@@ -28,11 +28,11 @@ return require('packer').startup(function(use)
     }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons'},
+        requires = { 'kyazdani42/nvim-web-devicons' },
         config = function()
             require('plugins.lualine')
         end
-    } 
+    }
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
     }
     use {
         'romgrk/barbar.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'},
+        requires = { 'kyazdani42/nvim-web-devicons' },
         config = function()
             require('plugins.barbar')
         end
@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
             'hrsh7th/cmp-path',
             'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
-        },	
+        },
         config = function()
             require('plugins.cmp')
         end
@@ -83,13 +83,13 @@ return require('packer').startup(function(use)
     }
     use {
         "windwp/nvim-autopairs",
-        config = function() 
+        config = function()
             require("nvim-autopairs").setup {}
         end
     }
     use {
-        "akinsho/toggleterm.nvim", 
-        tag = '*', 
+        "akinsho/toggleterm.nvim",
+        tag = '*',
         config = function()
             require('plugins.toggleterm')
         end
@@ -99,12 +99,12 @@ return require('packer').startup(function(use)
         config = function()
             require('plugins.gitsigns')
         end
-    } 
+    }
     use 'lewis6991/impatient.nvim'
     use {
         "nvim-telescope/telescope.nvim",
-	tag = '0.1.0',
-        requires = {'nvim-lua/plenary.nvim'},
+        tag = '0.1.0',
+        requires = { 'nvim-lua/plenary.nvim' },
         config = function()
             require('plugins.telescope')
         end

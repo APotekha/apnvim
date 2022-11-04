@@ -7,13 +7,12 @@ local palettes = {
 }
 local groups = {
     nordfox = {
-        --MsgArea = { bg = "#292F3B" },
-        BufferCurrent = { bg = "#2e3440" },
-        BufferCurrentSign = { bg = "#2e3440" },
-        BufferCurrentMod = { bg = "#2e3440" },
-        BufferCurrentTarget = { bg = "#2e3440"},
-        ["@method"]     = { fg = "#D69F7E"},
-        ["@function"] = { fg = "#D69F7E"},
+        BufferCurrent       = { bg = "#2e3440" },
+        BufferCurrentSign   = { bg = "#2e3440" },
+        BufferCurrentMod    = { bg = "#2e3440" },
+        BufferCurrentTarget = { bg = "#2e3440" },
+        ["@method"]         = { fg = "#D69F7E" },
+        ["@function"]       = { fg = "#D69F7E" },
     }
 }
 require('nightfox').setup({
@@ -23,8 +22,6 @@ require('nightfox').setup({
     },
     palettes = palettes,
     groups = groups,
-    modules = {
-        
-    }
+    modules = {}
 })
 vim.cmd("colorscheme nordfox")
