@@ -22,5 +22,3 @@ opt.fillchars = 'eob: '
 opt.numberwidth = 4
 opt.signcolumn = 'yes'
 opt.swapfile = false
-opt.laststatus = 0
-opt.ruler = false
