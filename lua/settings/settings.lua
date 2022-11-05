@@ -1,5 +1,5 @@
 vim.api.nvim_exec([[
-  language messages en_US
+  language messages 'en_US.UTF-8'
 ]], false)
 
 local opt = vim.opt
