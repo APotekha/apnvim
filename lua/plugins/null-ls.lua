@@ -4,6 +4,8 @@ require("null-ls").setup({
         require("null-ls").builtins.diagnostics.flake8.with({
             extra_args = { "--ignore=F401, E501" }
         }),
-
+        require("null-ls").builtins.diagnostics.golangci_lint,
+        require("null-ls").builtins.formatting.rustfmt,
+         
     },
 })

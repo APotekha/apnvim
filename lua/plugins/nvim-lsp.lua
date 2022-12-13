@@ -38,3 +38,30 @@ require('lspconfig').pyright.setup{
             }
         }
 }
+require('lspconfig').gopls.setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {}
+}
+require('lspconfig').rust_analyzer.setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {
+        ["rust-analyzer"] = {
+        imports = {
+            granularity = {
+                group = "module",
+            },
+            prefix = "self",
+        },
+        cargo = {
+            buildScripts = {
+                enable = true,
+            },
+        },
+        procMacro = {
+            enable = true
+        },
+        }
+    }
+})
