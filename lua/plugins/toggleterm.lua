@@ -1,1 +1,6 @@
-require("toggleterm").setup {}
+require("lint").setup{}
+
+require("lint").linters_by_ft = {
+    python = { "ruff" },
+  }
+  

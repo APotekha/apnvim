@@ -30,22 +30,20 @@ local lsp_flags = {
 require('lspconfig').pyright.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+   
     settings = {
         python = {
             analysis = {
-                extraPaths = {"C:/Program Files/Side Effects Software/Houdini 19.5/houdini/python3.9libs"},
+                
                 },
             }
         }
 }
-require('lspconfig').gopls.setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    settings = {}
-}
+
 require('lspconfig').rust_analyzer.setup({
     on_attach = on_attach,
     flags = lsp_flags,
+    cmd = {"C:/Users/Ryzen/AppData/Local/nvim-data/mason/bin/rust-analyzer.cmd"},
     settings = {
         ["rust-analyzer"] = {
         imports = {
@@ -63,5 +61,22 @@ require('lspconfig').rust_analyzer.setup({
             enable = true
         },
         }
+    }
+})
+
+require('lspconfig').clangd.setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    cmd = {"C:/Users/Ryzen/AppData/Local/nvim-data/mason/bin/clangd.cmd"}
+})
+
+require('lspconfig').ruff_lsp.setup({
+    on_attach = on_attach,
+    cmd = {"C:/Users/Ryzen/AppData/Local/nvim-data/mason/bin/ruff-lsp.cmd"},
+    init_options = {
+      settings = {
+        -- Any extra CLI arguments for `ruff` go here.
+        args = {},
+      }
     }
 })

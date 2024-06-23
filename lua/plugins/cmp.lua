@@ -1,5 +1,4 @@
 local cmp = require('cmp')
-local lspkind = require('lspkind')
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -43,11 +42,4 @@ cmp.setup {
         { name = 'luasnip' },
 
     }),
-
-    formatting = {
-        format = lspkind.cmp_format({
-            mode = 'symbol',
-            maxwidth = 50,
-        })
-    }
 }
